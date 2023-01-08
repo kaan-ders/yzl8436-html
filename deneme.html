@@ -1,17 +1,42 @@
 <html>
 	<head>
 		<title>İlk web sayfamız</title>
+		<meta charset="UTF-8" />
+		<!-- link, script -->
+		<link rel="stylesheet" href="style.css" />
+		<style>
+			h1 { background-color: red; }
+			h2 { color: yellow; text-decoration:underline; text-shadow: 2px 2px 5px red; }
+			.deneme {
+				 /*border:2px dotted green;*/
+				 border-bottom: 1px solid green;
+				 background-image: url("img/resim1.jpg");
+				 background-repeat: repeat-x;
+			}
+			
+			p {
+			  margin: 25px 50px 75px 100px;
+			  /*max-width:100px;*/
+			  text-align:justify;
+			  line-height: 1.7;
+			  font-size:25px;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Başlık 1</h1>
-		<h2>Başlık 2</h2>
-		<h3>Başlık 3</h2>
-		<p style="font-weight:bold;">Merhaba dünya!</p>
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+		<h1 style="width:30%;height:200px;">Başlık 1</h1>
+		<h2 id="test">Başlık 2</h2>
+		<h2 style="display:none;">Başlık 2.1</h2>
+		<h2>Başlık 2.2</h2>
+		<h3 class="yesil">Başlık 3</h2>
+		<p style="font-weight:bold;color:blue;">Merhaba dünya!</p>
+		<p class="deneme" style="padding: 25px 50px 75px 100px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		<p class="yesil kalin">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
 		<p>Kişi bilgisi: <hr /> <b>Adı:</b> Ahmet <br /> <strong>Soyadı:</strong> Koç</p>
 		
 		<a href="https://google.com" target="_blank">tıklayın</a><br />
+		<a href="deneme2.html">deneme2</a><br />
+		
 		<img src="https://i.ytimg.com/vi/3t1nl4IO7DM/maxresdefault.jpg" width="300px" />
 		<img src="img/resim1.jpg" width="300px" /><br />
 		
@@ -20,16 +45,82 @@
 		<br>
 		
 		<ul>
-			<li>merhaba</li>
+			<li class="yesil">merhaba</li>
 			<li>slm</li>
 		</ul>
 		
-		<!-- <ol>
+		<ol>
 			<li>merhaba</li>
 			<li>slm</li>
-		</ol> -->
+		</ol>
 		
 		<!-- burası açıklamadır -->
 		<!-- tablolar, div - kutular, formlar -->
+		
+		<br>
+		<br>
+		<br>
+		
+		
+		<table border="1" width="300" cellpadding="5" cellspacing="5">
+			<thead>
+				<tr>
+					<!--<td><b>İsim</b></td>
+					<td><strong>Soyisim</strong></td>-->
+					<th>İsim</th>
+					<th>Soyisim</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Ahmet</td>
+					<td>Koç</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<center>
+							<b>Fatma</b>
+						</center>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div id="dvDeneme" style="margin-top:10px; margin-bottom:100px; padding:20px; border-style: dotted;">
+			Merhaba
+		</div>
+		Dünya
+		<br><br><br><hr><br><br><br>
+		
+		<form action="islem.aspx" method="post">
+			<label for="txtIsim">HTML</label>
+			<input type="text" id="txtIsim" name="txtIsim" maxlength="5"><br>
+			
+			<input type="date" name="dtTarih"><br>
+			<input type="number" value="23534" step=".01" name="txtNumara"><br>
+			<input type="password" value="123" name="txtPassword"><br>
+			
+			<input type="radio" name="ders"><label for="html">HTML</label>
+			<input type="radio" name="ders"><label for="html">CSS</label><br>
+			<input type="checkbox" name="seans"><label for="html">HTML</label> <input type="checkbox" name="seans"><label for="html">CSS</label><br>
+			<input type="checkbox" value="1"><label for="html">Adı</label> <input type="checkbox" value="2"><label for="html">Soyadı</label><br>
+			
+			<select id="cars" name="cars">
+			  <option value="volvo">Volvo</option>
+			  <option value="saab">Saab</option>
+			  <option value="fiat">Fiat</option>
+			  <option value="audi">Audi</option>
+			</select><br>
+			
+			<label for="html">Adres</label><br>
+			<textarea name="message" rows="10"></textarea>
+			
+			<button type="submit">gönder</button>
+			<button type="button">işlem</button>
+		</form>
+		
+		
+		
+		
 	</body>
 </html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <p>
+        DİV, "divison" kelimesini kisaltilmisi olarak HTML dunyasina giris yapmistir. Asil
+        anlami tasarimsal alanlar'dır. Birbirinden bagimsiz olarak cok daha gorsel ve kontrol
+        edilmesi kolay tasarim alanlarini olusturma ihtiyacı sonrası hayatimiza girmistir.
+        Ozellikle tablolar ile yapilan tasarimlar uzun zaman ve performans istemi div kullaniminin
+        onemini gun gectikce arttirmaktadir...
+    </p>
+    <p>
+        Bazı temel kavramlar;
+        <ul>
+            <li>
+                id => Site uzerinde yer alan ozel bir kontrolu ifade etmek icin kullanilan ozniteliktir.
+                Bir ID benzersizdir ve W3C kurallarina gore kullanilan bir ID baska bir html elementi
+                tarafindan kullanilamaz!
+            </li>
+            <li>width => Bir elementin genisligini ifade eder...</li>
+            <li>height => Bir elementin yuksekligini ifade eder...</li>
+            <li>margin-left => Bir elementin sol taraftan dis cerceveye olan uzakligini temsil eder...</li>
+            <li>
+                margin-right => Bir elementin sag taraftan dis cerceveye olan uzakligini temsil
+                eder... <strong>
+                    NOT: Bir elemente margin-left ve margin-right degeri olarak auto girerseniz,
+                    o element cozunurlugunuze gore sayfanin ortasina yerlesir...
+                </strong>
+            </li>
+            <li>
+                Float => İlgili tasarimsal alanin hangi yone dayali olarak tasarima dahil edilecegi
+                belirtilir. Varsayilan olarak bir div boyutu ne olursa olsun, o yukseklikte alani
+                kendisine ayirir. Birden fazla tasarimsal alani yan yana eklemek icin float degerine
+                bir atama yaparsiniz...
+            </li>
+        </ul>
+    </p>
+    <div id="main-container" style="width: 700px; height: 600px; margin-left: auto; margin-right: auto;">
+        <div id="banner" style="width: 700px; height: 50px; background-color: Black;">
+        </div>
+        <div id="menu" style="width: 100px; height: 520px; background-color: Orange; float: left;">
+        </div>
+        <div id="icerik" style="width: 600px; height: 520px; background-color: Maroon; float: left;">
+            <img src="images/downloads_code_boxshot.png" alt="Visual Studio Sürümleri" />
+        </div>
+        <div id="footer" style="width: 700px; height: 30px; background-color: Lime; float: left;">
+        </div>
+    </div>
+</body>
+</html>

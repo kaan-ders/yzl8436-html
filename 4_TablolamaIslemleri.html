@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <p>
+        Sayfa uzerinde bir takim verileri tablo formatinda gostermek icin size sunulan element
+        "table" elementidir. "td" ve "tr" en cok kullanilan child elementlerdir. TD; kolon
+        bilgisini, TR ise satir bilgisini temsil eder..
+    </p>
+    <p>
+        Bazı özellikleri;
+        <ul>
+            <li>Width => Tablonun genisligini verir...</li>
+            <li>Border => Tablonun ic ve dis cerceveleri icin bir boyut verilir...</li>
+            <li>Cellspacing => Hucrelerin birbirine olan uzakliklarini verir...</li>
+            <li>Cellpadding => Hucre icerisindeki degerlerin dis cerceveye olan uzakliklarini verir...</li>
+            <li>
+                Colspan => Hucrelerin merge edilmesini (birlestirilmesini) saglayan ozelliktir.
+                Asagidaki tabloda vermis oldugumuz 2 degeri, o hucrenin 2 sutunlukmus gibi davranmasini
+                soyler..
+            </li>
+            <li>Rowspan: Satırları merge(birleştirilmesi)'ni sağlar</li>
+        </ul>
+    </p>
+    <table width="100%" border="5" cellspacing="5" cellpadding="5">
+        <tr>
+            <td>
+                ADI
+            </td>
+            <td>
+                SOYADI
+            </td>
+            <!--<th>
+                th'ın td'den farkı veriyi ortalar ve kalın yazar
+            </th>-->
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center>
+                    <strong>Bu tablo içerisinde sınıf mevcudu yer almaktadır.</strong>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ahmet
+            </td>
+            <td>
+                Yıldız
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ali Veli
+            </td>
+            <td>
+                Tanır
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Erhan
+            </td>
+            <td>
+                Ölçek
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
