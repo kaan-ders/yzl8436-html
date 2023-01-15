@@ -5,7 +5,7 @@
 		<!-- link, script -->
 		<link rel="stylesheet" href="style.css" />
 		<style>
-			h1 { background-color: red; }
+			h1 { background-color: red!important; }
 			h2 { color: yellow; text-decoration:underline; text-shadow: 2px 2px 5px red; }
 			.deneme {
 				 /*border:2px dotted green;*/
@@ -24,7 +24,7 @@
 		</style>
 	</head>
 	<body>
-		<h1 style="width:30%;height:200px;">Başlık 1</h1>
+		<h1 style="width:30%;height:200px;background-color:yellow;">Başlık 1</h1>
 		<h2 id="test">Başlık 2</h2>
 		<h2 style="display:none;">Başlık 2.1</h2>
 		<h2>Başlık 2.2</h2>
@@ -92,7 +92,7 @@
 		Dünya
 		<br><br><br><hr><br><br><br>
 		
-		<form action="islem.aspx" method="post">
+		<form action="islem.aspx" method="get">
 			<label for="txtIsim">HTML</label>
 			<input type="text" id="txtIsim" name="txtIsim" maxlength="5"><br>
 			

@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>İlk javascript sayfamız</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .yesil {
+            background-color:darkolivegreen;
+        }
+
+        #pSonuc {
+            color:red;
+            font-weight:bolder;
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div id="dvKutu" class="col-12 p-3" style="border-style: dotted;" onmouseover="renkDegistir();" onmouseout="renkSil();">
+                <button class="btn btn-primary" onclick="isimYazdir();">Javascript test</button>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div id="error" class="alert alert-danger" role="alert">
+                #HATA
+            </div>
+            
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Adı Soyadı</label>
+                    <input type="text" class="form-control" id="txtName">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Çalışma yılı</label>
+                    <input type="number" class="form-control" min="0" value="0" id="nbYear">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="hesapla();">Hesapla</button>
+            </form>
+
+            <p id="pSonuc"></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="page.js"></script>
+    <script>
+        //jquery
+
+        $(document).ready(function () {
+            $('#error').hide();
+        });
+
+    </script>
+    
+    <script>
+        const hesapla = function () {
+            const baseTazminat = 5000;
+
+            var calisan = {
+                isim: '',
+                calismaYili: 0,
+                tazminat: 0
+            };
+
+            calisan.isim = document.getElementById("txtName").value;
+            calisan.calismaYili = document.getElementById("nbYear").value;
+
+            if (calisan.isim === '') {
+                $('#error').text("Adı soyadı boş olamaz");
+                $('#error').fadeIn("slow");
+
+                return;
+            }
+
+            if (calisan.calismaYili <= 0) {
+                $('#error').text("Çalışma zamanı 0 olamaz");
+                $('#error').show();
+
+                return;
+            }
+
+            calisan.tazminat = baseTazminat * calisan.calismaYili;
+
+            document.getElementById("txtName").value = '';
+            document.getElementById("nbYear").value = "0";
+
+            document.getElementById("pSonuc").innerText = calisan.isim + " isimli kişinin hakettiği tazminat miktarı: " + calisan.tazminat + "TL'dir.";
+        }
+    </script>
+</body>
+</html>
