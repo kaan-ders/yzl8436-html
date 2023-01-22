@@ -2,6 +2,7 @@
 //dinamik - typed olmaması
 
 /*var sayi1 = 10;
+ * sayi1 = "10";
 
 if (sayi1 === 10) {
 	alert('ahmet');
@@ -21,27 +22,13 @@ for (var i = 0; i < sayi1; i++) {
 	alert(i);
 }
 
-while (sayi1 == "10") {
+while (sayi1 === "10") {
 
 }
 
 do {
 
 } while (sayi1 === 10);*/
-
-function isimYazdir() {
-	alert("ayşe");
-}
-
-function renkDegistir() {
-	var element = document.getElementById('dvKutu');
-	element.classList.add('yesil');
-}
-
-function renkSil() {
-	var element = document.getElementById('dvKutu');
-	element.classList.remove('yesil');
-}
 
 /*var liste = ['asda', 123];
 //liste[2] = 'ahmet "asdasd"';
@@ -106,3 +93,32 @@ function test(p1) {
 }
 
 alert(test2());*/
+
+
+
+function isimYazdir() {
+	alert("ayşe");
+}
+
+function renkDegistir() {
+	/*var element = document.getElementById('dvKutu');
+	element.classList.add('yesil');*/
+
+	//$('#dvKutu').addClass('yesil');
+	$('#dvKutu').toggleClass('yesil');
+
+	/*var yukseklik = $('#dvKutu').height();
+	$('#dvKutu').height(yukseklik * 2);/
+
+}
+
+function renkSil() {
+	/*var element = document.getElementById('dvKutu');
+	element.classList.remove('yesil');*/
+
+	//$('#dvKutu').removeClass('yesil');
+	$('#dvKutu').toggleClass('yesil');
+
+	/*var yukseklik = $('#dvKutu').height();
+	$('#dvKutu').height(yukseklik / 2);*/
+}
